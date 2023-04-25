@@ -1,0 +1,53 @@
+.heroContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.left small {
+    color: #FF9900;
+    font-family: 'Lato';
+    margin-bottom: 40px;
+}
+
+.left button {
+    background-color: #FF9900;
+    width: 203px;
+    height: 56px;
+    border-radius: 9px;
+}
+.left button:hover {
+    background-color: rgb(253, 143, 143);
+}
+.right img {
+    width: 451px;
+    height: 633px;
+    border-radius: 8px;
+    box-shadow: -12px 12px #FFE0B3;
+    margin-top: 160px;
+}
+
+@media screen and (max-width: 1300px) {
+    .right img {
+        width: 300px;
+        height: 350px;
+        border-radius: 8px;
+    }
+    
+}
+
+@media screen and (min-height: 400px) {
+    .right img {
+        margin-top: 100px;
+    }
+    
+}

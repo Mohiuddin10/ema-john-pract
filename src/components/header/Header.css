@@ -1,0 +1,23 @@
+nav {
+    background-color: #1C2B35;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav img {
+    margin-left: 112px;
+}
+
+.menu a {
+    text-decoration:none;
+    color: white;
+    margin-left: 32px;
+}
+.menu a:hover {
+    color: orange;
+}
+.menu {
+    margin-right: 97px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
