@@ -1,0 +1,16 @@
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+.shopContainer {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    position: sticky;
+    top: 0;
+}
+@media screen and (max-width: 1280px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
