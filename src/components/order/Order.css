@@ -1,0 +1,45 @@
+.orderCart{
+    background-color: rgba(255, 153, 0, 0.3);
+    height: 944px;
+    border-radius: 10px;
+}
+@media screen and (max-width: 1280px) {
+    .orderCart {
+        height: 500px;
+    }
+}
+.info {
+    margin-left: 23px;
+}
+.info h2 {
+    text-align: center;
+}
+.btn {
+    display: flex;
+    flex-direction: column;
+}
+.btn button {
+    margin: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.btn button p {
+    margin-right: 7px;
+}
+.clearCart {
+    background-color: #FF3030;
+    color: white;
+}
+.clearCart:hover {
+    background-color: #FDCFD5;
+    color: black;
+}
+.reviewOrder {
+    background-color: #FF9900;
+    color: white;
+}
+.reviewOrder:hover {
+    background-color: #016450;
+}
