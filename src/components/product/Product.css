@@ -37,6 +37,12 @@
     height: 48px;
     border-radius: 0px 0px 8px 8px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addCart p{
+    margin-right: 5px;
 }
 .addCart:hover {
     background-color: orange;
