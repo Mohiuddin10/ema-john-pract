@@ -5,15 +5,24 @@ import { faArrowAltCircleRight, faTrash } from '@fortawesome/free-solid-svg-icon
 
 const Order = (props) => {
     console.log(props)
+    // Total Price Calculation 
+    let total = 0;
+    let shipping = 0;
+    let GTotal = 0;
+    for(const product of props.cart){
+        total = total + product.price;
+        shipping = shipping + product.shipping;
+    }
+    const tax = total * 0.1;
     return (
         <div className='orderCart'>
             <div className="info">
                 <h2>Order Summery</h2>
                 <h5>Selected Items: {props.cart.length}</h5>
-                <p>Total Price: $</p>
-                <p>Total Shipping Charge: $</p>
-                <p>Tax: $</p>
-                <h4>Grand Total: $</h4>
+                <p>Total Price: ${total}</p>
+                <p>Total Shipping Charge: ${shipping}</p>
+                <p>Tax: ${tax}</p>
+                <h4>Grand Total: ${GTotal}</h4>
             </div>
             <div className="btn">
             <button className='clearCart'>

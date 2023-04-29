@@ -26,6 +26,7 @@
 }
 .product-des {
     margin-left: 14px;
+    padding-bottom: 5px;
 }
 .seller {
     margin-top: 45px;
@@ -49,7 +50,7 @@
 }
 @media screen and (max-width: 1280px){
     .product {
-        height: 608px;
+        height: 650px;
         margin: 40px 25px;
     }
     
