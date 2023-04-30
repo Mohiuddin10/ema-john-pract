@@ -8,12 +8,13 @@ const Order = (props) => {
     // Total Price Calculation 
     let total = 0;
     let shipping = 0;
-    let GTotal = 0;
     for(const product of props.cart){
         total = total + product.price;
         shipping = shipping + product.shipping;
     }
-    const tax = total * 0.1;
+    let tax = total * 0.1;
+    tax = parseFloat(tax.toFixed(2));
+    const grandTotal = total + shipping + tax;
     return (
         <div className='orderCart'>
             <div className="info">
@@ -22,7 +23,7 @@ const Order = (props) => {
                 <p>Total Price: ${total}</p>
                 <p>Total Shipping Charge: ${shipping}</p>
                 <p>Tax: ${tax}</p>
-                <h4>Grand Total: ${GTotal}</h4>
+                <h4>Grand Total: ${grandTotal}</h4>
             </div>
             <div className="btn">
             <button className='clearCart'>
