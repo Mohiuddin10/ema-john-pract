@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const Order = (props) => {
-    console.log(props)
     // Total Price Calculation 
     let total = 0;
     let shipping = 0;
