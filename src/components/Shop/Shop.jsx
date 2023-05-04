@@ -12,23 +12,27 @@ const Shop = () => {
         .then(data => setProducts(data))
     }, []);
 
+    const [cart, setCart] = useState([]);
+
     const addToCart = (product) => {
         const newCart = [...cart, product];
         setCart(newCart);
         addToDb(product.id);
     };
 
-    useEffect( () => {
+    useEffect(() => {
         const storedCart = getShoppingCart();
-        let savedCart = [];
+        const savedCart = [];
         for (const id in storedCart) {
-            const addedProduct = products.find( p => p.id === id);
-            savedCart.push(addedProduct);
-            console.log(savedCart)
-        };
+            const addedProduct = products.find(product => product.id === id);
+            if (addedProduct) {
+                savedCart.push(addedProduct);
+            }
+        }
         setCart(savedCart);
-    }, [products]);
-    const [cart, setCart] = useState([]);
+    },[products]);
+    
+    
 
     return (
         <div className='shopContainer'>
