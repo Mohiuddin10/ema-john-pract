@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'SaturdayAugust';
+    src: url(../../asset/font/SaturdayAugust.woff);
+}
 .orderCart{
     background-color: rgba(255, 153, 0, 0.3);
     height: 944px;
@@ -46,4 +50,9 @@
 }
 .reviewOrder:hover {
     background-color: #016450;
+}
+
+.heading {
+    font-family: 'SaturdayAugust', cursive;
+    font-weight: normal;
 }

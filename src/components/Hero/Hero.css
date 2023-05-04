@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'SaturdayAugust';
+    src: url(../../asset/font/SaturdayAugust.woff);
+}
+.heading {
+    font-family: 'SaturdayAugust', cursive;
+    font-weight:bolder;
+}
 .heroContainer {
     display: flex;
     align-items: center;

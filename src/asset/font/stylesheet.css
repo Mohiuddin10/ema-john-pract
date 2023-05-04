@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Saturday August';
+    src: url('SaturdayAugust.woff2') format('woff2'),
+        url('SaturdayAugust.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -7,7 +7,7 @@ const Hero = () => {
         <div className='heroContainer'>
             <div className="left">
                 <small>Sell upto 70% off</small>
-                <h1>New Collection for Fall</h1>
+                <h1 className='heading'>New Collection for Fall</h1>
                 <p>Discover all the new arrivals of ready-to-wear collection.</p>
                 <button>
                     <h4>Shop Now</h4>
