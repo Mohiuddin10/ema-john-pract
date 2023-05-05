@@ -5,21 +5,15 @@ import { faArrowAltCircleRight, faTrash } from '@fortawesome/free-solid-svg-icon
 
 const Order = (props) => {
     // Total Price Calculation 
+    console.log(props)
     let total = 0;
     let shipping = 0;
     let quantity = 0;
     for(const product of props.cart){
-        if (product.quantity === 0){
-            product.quantity = 1;
-            console.log('if ', total);
-        }
-        else {
-            quantity = quantity + product.quantity;
-            console.log('else ', total);
-        }
+        quantity = quantity + product.quantity;
         total = total + product.price * product.quantity;
-        console.log(total);
         shipping = shipping + product.shipping;
+        console.log(product.quantity)
     }
     let tax = total * 0.1;
     tax = parseFloat(tax.toFixed(2));

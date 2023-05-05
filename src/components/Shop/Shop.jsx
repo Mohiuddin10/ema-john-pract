@@ -13,11 +13,25 @@ const Shop = () => {
     }, []);
 
     const [cart, setCart] = useState([]);
-
-    const addToCart = (product) => {
-        const newCart = [...cart, product];
+// ====> first find exist or not by find function
+// then if not-exists then set selected product quqntity to 1
+// let newCar = []
+// set newcart ...cart, selectedCart
+    const addToCart = (selectedProduct) => {
+        let newCart = [];
+        const exists = products.find(product => product.id === selectedProduct.id);
+        if (!exists) {
+            selectedProduct.quantity = 1;
+            newCart = [...cart, selectedProduct];
+        }
+        else {
+            const rest = cart.filter(product => product.id !== selectedProduct.id);
+            exists.quantity += 1;
+            newCart = [...rest, exists];
+        }
+        
         setCart(newCart);
-        addToDb(product.id);
+        addToDb(selectedProduct.id);
     };
 
     useEffect(() => {
